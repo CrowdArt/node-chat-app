@@ -4,3 +4,6 @@
 * npm i express@4.14.0 --save
 * nodemon server/server.js
 * heroku create
+* git push heroku master
+* https://warm-woodland-78091.herokuapp.com/ | https://git.heroku.com/warm-woodland-78091.git
+* 
