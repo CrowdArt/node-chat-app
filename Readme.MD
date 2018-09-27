@@ -11,3 +11,9 @@
 * npm i socket.io@1.4.8 --save //instant 2-way communication
 * callback is = (req, res)
 * localhost:3000/socket.io/socket.io.js
+* npm install expect@1.20.2 mocha@3.0.2 --save-dave
+* npm install nodemon --save-dev
+* npm test
+* Websocket.io - 
+
+simonrumi@gmail.com
