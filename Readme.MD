@@ -14,6 +14,4 @@
 * npm install expect@1.20.2 mocha@3.0.2 --save-dave
 * npm install nodemon --save-dev
 * npm test
-* Websocket.io - 
-
-simonrumi@gmail.com
+* Websocket
