@@ -15,4 +15,14 @@
 * npm install nodemon --save-dev
 * npm test
 * Websocket
-* `jQuery('#messages').append(li);` - statement adds the block to the DOM
+* `jQuery('#messages').append(li);` - statement adds the block to the DOM, system for rendering functions
+
+## Setup MongoDB
+* cd mongo/bin
+* ./mongod --dbpath ~/mongo-data
+* in another tab:
+    * ./mongo
+    * > db.Todos.insert({text: 'Vuk'})
+    * db.Todos.find()
+
+* [Mongo DB Native NodeJS Driver](https://github.com/mongodb/node-mongodb-native)
