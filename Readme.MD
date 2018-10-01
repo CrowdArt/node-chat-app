@@ -15,3 +15,4 @@
 * npm install nodemon --save-dev
 * npm test
 * Websocket
+* `jQuery('#messages').append(li);` - statement adds the block to the DOM
