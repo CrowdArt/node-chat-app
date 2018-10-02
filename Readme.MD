@@ -1,6 +1,6 @@
 ## Steps to setup the app:
+* https://mongoosejs.com/
 * https://arxiv.org/abs/1809.10049
-* https://nodejs.org/api/modules.html
 * [Node.js v10.11.0 Documentation](https://nodejs.org/api/)
 * npm i express@4.14.0 --save //express sets up an HTTP server
 * nodemon server/server.js
@@ -65,3 +65,5 @@ HMACSHA256(
   secret)
 ```
 The signature is used to verify the message wasn't changed along the way, and, in the case of tokens signed with a private key, it can also verify that the sender of the JWT is who it says it is.
+
+* calling a method on id => _id.getTimestamp()
