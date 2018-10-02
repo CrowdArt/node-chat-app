@@ -67,3 +67,6 @@ HMACSHA256(
 The signature is used to verify the message wasn't changed along the way, and, in the case of tokens signed with a private key, it can also verify that the sender of the JWT is who it says it is.
 
 * calling a method on id => _id.getTimestamp()
+
+## Mongoose ORM (Object Relational Mapping)
+* npm i mongoose@4.5.9 --save

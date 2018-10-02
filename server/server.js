@@ -9,6 +9,9 @@ const port = process.env.PORT || 3000;
 var app = express();
 var server = http.createServer(app);
 var io = socketIO(server);
+var mongoose = require('mongoose');
+
+MongoClient.connect('mongodb://localhost:27017/ChatApp');
 
 app.use(express.static(publicPath));
 
