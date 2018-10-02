@@ -1,14 +1,4 @@
-//const MongoClient = require('mongodb').MongoClient;
 const {MongoClient, ObjectID} = require('mongodb');
-
-var obj = new ObjectID;
-console.log(obj);
-
-// ES6 feature: object destructuring, 
-// let's you pull out properties from an object and creating variables
-// var user = {name: 'andrew', age: 25};
-// var {name} = user; // name is pulled out from the user object
-// console.log(name);
 
 MongoClient.connect('mongodb://localhost:27017/ChatApp', (err, client) => {
     if (err) {
@@ -16,32 +6,23 @@ MongoClient.connect('mongodb://localhost:27017/ChatApp', (err, client) => {
     } 
     console.log('Connected to MongoDB server');
     
+    // fetching docs, converting into an array and printing onto the screen
     /** 
-    const db = client.db('ChatApp');
-
-    db.collection('Chat').insertOne({
-        text: 'Testing',
-        completed: false
-    }, (err, result) => {
-        if (err) {
-            return console.log('Unable to insert Chat', err);
-        }
-
-        console.log(JSON.stringify(result.ops, undefined, 2));
+    db.collection('Chat').find({
+        _id: new ObjectID('')
+    }).toArray().then((docs) => {
+        console.log('Chat');
+        console.log(JSON.stringify(docs, undefined, 2));
+    }, (err) => {
+        console.log('Unable to fetch todos', err);
     });
     */
-    // Insert new doc into Users (name, age, location)
-    db.collection('Users').insertOne({
-        name: 'Vuk',
-        age: 25,
-        location: 'San Francisco' 
-    }, (err, result) => {
-        if (err) {
-            return console.log('Unable to insert user', err);
-        }
 
-        console.log(result.ops[0]._id.getTimestamp());
+   db.collection('Chat').find().count().then((count) => {
+        console.log(`Chat count: ${count}`);
+    }, (err) => {
+        console.log('Unable to fetch todos', err);
     });
-
-    client.close();
+    
+    //client.close();
 });
